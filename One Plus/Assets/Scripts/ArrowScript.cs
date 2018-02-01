@@ -19,10 +19,10 @@ public class ArrowScript: MonoBehaviour {
 		transform.Translate (Vector3.right * Time.deltaTime * speed);
 	}
 
-	void OnCollisionEnter2D(Collision2D other) {
-		if (other.gameObject.tag == "Ground") {
+	void OnCollisionEnter2D(Collision2D collision) {
+		if (collision.gameObject.tag == "Ground") {
 			Destroy (this.gameObject);
-		} else if (other.gameObject.tag == "Player") {
+		} else if (collision.gameObject.tag == "Player") {
 			Destroy (this.gameObject);
 		}
 	}

@@ -29,8 +29,9 @@ public class ArrowShooterScript : MonoBehaviour {
 		GameObject Clone;
 
 		//spawning the bullet at position
-		Vector3 pos = transform.position + (Vector3.right * 0.55f);
-		Clone = (Instantiate(arrowPrefab, pos,transform.rotation)) as GameObject;
+//		Vector3 pos = transform.position + (Vector3.right * 0.55f * transform.rotation);
+		Clone = (Instantiate(arrowPrefab, transform.position, transform.rotation)) as GameObject;
+		Clone.transform.Translate (Vector3.right * 0.55f);
 		Debug.Log ("Arrow spawned is found");
 	}
 }

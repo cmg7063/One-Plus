@@ -51,12 +51,21 @@ public class PlayerControl : MonoBehaviour
         ResetValues();
     }
 
+	// collision detection logic
+	void OnCollisionEnter2D(Collision2D collision) {
+		// if collision is arrow delete the arrow and respawn the player
+		if (collision.gameObject.tag == "Arrow") {
+			Destroy (collision.gameObject);
+			RespawnPlayer ();
+		}
+	}
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "enemy") // for now, specify enemy tag
         {
             //Destroy(this.gameObject);
-            transform.position = new Vector3(-5f, -2f, 0); // reset position
+			RespawnPlayer ();
         }
         if(collision.gameObject.tag == "key")
         {
@@ -127,11 +136,17 @@ public class PlayerControl : MonoBehaviour
         jump = false;
     }
 
+	// respawn the player at starting point
+	private void RespawnPlayer() {
+		transform.position =  new Vector3(-15f, -8.75f, 0);
+	}
+
+	// if player goes out of bound respawn player
     private void Bounds()
     {
         if (this.gameObject.transform.position.y <= -12f)
         {
-            transform.position = new Vector3(-5f, -2f, 0);
+			RespawnPlayer ();
         }
     }
 }
