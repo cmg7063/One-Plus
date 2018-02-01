@@ -3,33 +3,60 @@ using System.Collections;
 
 public class PlayerControl : MonoBehaviour
 {
-    private float speed;
+    private float movementSpeed;
     private bool hasKey;
+    private bool facingRight;
+
     private Rigidbody2D rigidbody;
-    private bool grounded;
+    private Animator animator;
+
+    [SerializeField]
+    private Transform[] groundPoints;
+
+    private float groundRadius;
+
+    [SerializeField]
+    private LayerMask whatIsGround;
+
+    private bool isGrounded;
+
+    private bool jump;
+
+    private float jumpForce;
 
     // Use this for initialization
     void Start()
     {
-        speed = 3;
+        movementSpeed = 3;
+        groundRadius = 0.2f;
+        jumpForce = 400;
         hasKey = false;
+        facingRight = true;
         rigidbody = GetComponent<Rigidbody2D>();
-        grounded = true;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Wrap();
-        Move();
+        HandleInput();
+    }
+
+    void FixedUpdate()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        isGrounded = IsGrounded();
+        Move(horizontal);
+        Flip(horizontal);
+        ResetValues();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "spike")
+        if(collision.gameObject.tag == "enemy") // for now, specify enemy tag
         {
             //Destroy(this.gameObject);
-            transform.position = new Vector3(-5f, -2f, 0);
+            transform.position = new Vector3(-5f, -2f, 0); // reset position
         }
         if(collision.gameObject.tag == "key")
         {
@@ -43,34 +70,64 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    public bool IsGrounded()
+    private bool IsGrounded()
     {
-        if (this.rigidbody.velocity.y != 0)
+        if (rigidbody.velocity.y <= 0)
         {
-            grounded = false;
+            foreach(Transform point in groundPoints)
+            {
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(point.position, groundRadius, whatIsGround);
+
+                for(int i = 0; i < colliders.Length; i++)
+                {
+                    if(colliders[i].gameObject != gameObject)
+                    {
+                        return true;
+                    }
+                }
+            }
         }
-        else
-        {
-            grounded = true;
-        }
-        return grounded;
+        return false;
     }
 
-    void Move()
+    private void Move(float horizontal)
     {
-        Vector2 move = rigidbody.velocity;
-        float axisX = Input.GetAxis("Horizontal");
+        rigidbody.velocity = new Vector2(horizontal * movementSpeed, rigidbody.velocity.y);
+        animator.SetFloat("speed", Mathf.Abs(horizontal));
 
-        move.x = axisX * speed;
-
-        if(Input.GetButton("Jump") && IsGrounded())
+        if(isGrounded && jump)
         {
-            move.y = 7;
+            isGrounded = false;
+            rigidbody.AddForce(new Vector2(0, jumpForce));
         }
-        rigidbody.velocity = move;
     }
 
-    void Wrap()
+    private void HandleInput()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            jump = true;
+        }
+    }
+
+    private void Flip(float horizontal)
+    {
+        if(horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
+        {
+            facingRight = !facingRight;
+
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
+        }
+    }
+
+    private void ResetValues()
+    {
+        jump = false;
+    }
+
+    private void Bounds()
     {
         if (this.gameObject.transform.position.y <= -12f)
         {

@@ -143,6 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b0b0ebb4e29794fb59bfd635f707ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundPoints: []
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &738039501
 BoxCollider:
   m_ObjectHideFlags: 0
