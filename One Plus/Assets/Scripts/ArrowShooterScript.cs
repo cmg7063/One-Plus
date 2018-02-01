@@ -10,13 +10,13 @@ public class ArrowShooterScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		maxTime = timeLeft;
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		timeLeft -= Time.deltaTime;
 
+		// fires an arrow and restarts the timer
 		if (timeLeft <= 0) {
 			FireArrow ();
 
@@ -24,8 +24,8 @@ public class ArrowShooterScript : MonoBehaviour {
 		}
 	}
 
+	// fires an arrow
 	public void FireArrow() {
-		//Clone of the bullet
 		GameObject Clone;
 
 		//spawning the bullet at position

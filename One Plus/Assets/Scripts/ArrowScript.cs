@@ -19,10 +19,10 @@ public class ArrowScript: MonoBehaviour {
 		transform.Translate (Vector3.right * Time.deltaTime * speed);
 	}
 
+	// collision detection logic
 	void OnCollisionEnter2D(Collision2D collision) {
+		// destroy self it collision with ground
 		if (collision.gameObject.tag == "Ground") {
-			Destroy (this.gameObject);
-		} else if (collision.gameObject.tag == "Player") {
 			Destroy (this.gameObject);
 		}
 	}
