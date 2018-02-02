@@ -54,25 +54,21 @@ public class PlayerControl : MonoBehaviour
 	// collision detection logic
 	void OnCollisionEnter2D(Collision2D collision) {
 		// if collision is arrow delete the arrow and respawn the player
-		if (collision.gameObject.tag == "Arrow") {
+		if (collision.gameObject.tag == "Arrow")
+        {
 			Destroy (collision.gameObject);
 			RespawnPlayer ();
 		}
-	}
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "enemy") // for now, specify enemy tag
+        if (collision.gameObject.tag == "Enemy") // for now, specify enemy tag
         {
-            //Destroy(this.gameObject);
-			RespawnPlayer ();
+            RespawnPlayer();
         }
-        if(collision.gameObject.tag == "key")
+        if (collision.gameObject.tag == "key")
         {
             Destroy(collision.gameObject);
             hasKey = true;
         }
-        if(collision.gameObject.tag == "Goal" && hasKey)
+        if (collision.gameObject.tag == "Goal" && hasKey)
         {
             // Code to enter next level
             // SceneManager.LoadScene([Level here]);
@@ -137,7 +133,8 @@ public class PlayerControl : MonoBehaviour
     }
 
 	// respawn the player at starting point
-	private void RespawnPlayer() {
+	private void RespawnPlayer()
+    {
 		transform.position =  new Vector3(-15f, -8.75f, 0);
 	}
 
