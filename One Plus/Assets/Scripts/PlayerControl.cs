@@ -133,7 +133,8 @@ public class PlayerControl : MonoBehaviour
     }
 
 	// respawn the player at starting point
-	private void RespawnPlayer() {
+	private void RespawnPlayer()
+    {
 		transform.position =  new Vector3(-15f, -8.75f, 0);
 	}
 
