@@ -20,10 +20,10 @@ The unity files will be in `One-Plus\One Plus\`. **Leave this as is to prevent a
 You can use Git GUI like source tree to do these features for you.  
 
 **Command line**
-	Create new branch `git checkout -b (branchName)`  
-	View local branches and current branch `git branch`  
-	Change local branch `git checkout (branchName)`  
-	Delete local branch `git branch -d (branchName)`  
+*	Create new branch `git checkout -b (branchName)`
+*	View local branches and current branch `git branch`
+*	Change local branch `git checkout (branchName)`
+*	Delete local branch `git branch -d (branchName)`
 
 
 ## Staging, Commiting, and Pushing
@@ -31,11 +31,11 @@ You can use Git GUI like source tree to do these features for you.
 You can use Git GUI like source tree to do these features for you.  
 
 **Command line**  
-	Discard Changes `git checkout /file/path/to/revert` or `git checkout .` discard all file changes  
-	Check status `git status`  
-	Stage changes `git add (file name)` or `git add --a` to add all changed files  
-	Commit `git commit -m '(commit message)`  
-	Push `git push (remote) (branch)` remote will generally be `origin`  
+*	Discard Changes `git checkout /file/path/to/revert` or `git checkout .` discard all file changes
+*	Check status `git status`
+*	Stage changes `git add (file name)` or `git add --a` to add all changed files
+*	Commit `git commit -m '(commit message)`
+*	Push `git push (remote) (branch)` remote will generally be `origin`
 
 
 ## Pull Request
