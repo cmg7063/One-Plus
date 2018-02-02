@@ -31,7 +31,7 @@ You can use Git GUI like source tree to do these features for you.
 You can use Git GUI like source tree to do these features for you.  
 
 **Command line**  
-	Discard Changes `git checkout /file/path/to/revert` or `git checkout .` discard all file changes
+	Discard Changes `git checkout /file/path/to/revert` or `git checkout .` discard all file changes  
 	Check status `git status`  
 	Stage changes `git add (file name)` or `git add --a` to add all changed files  
 	Commit `git commit -m '(commit message)`  
