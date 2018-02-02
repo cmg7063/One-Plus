@@ -9,13 +9,12 @@ Members: Jia Wessen, Sungmin Park, Nathan Sun, Zach Michaels, Corinne Green
 Concept: A single level played over and over that adds an obstacle after each time it is completed.  
 
 # Git / Github info
-----
+
 ## Clone
 
 When you clone a repo it will create a folder with repo's name One-Plus. It will have a .git file in it which will track any changes to the folder.  
 The unity files will be in `One-Plus\One Plus\`. **Leave this as is to prevent adding local settings to the repo.**  
 
-----
 ## Branch
 
 You can use Git GUI like source tree to do these features for you.  
@@ -26,7 +25,7 @@ You can use Git GUI like source tree to do these features for you.
 	Change local branch `git checkout (branchName)`  
 	Delete local branch `git branch -d (branchName)`  
 
-----
+
 ## Staging, Commiting, and Pushing
 
 You can use Git GUI like source tree to do these features for you.  
@@ -38,7 +37,7 @@ You can use Git GUI like source tree to do these features for you.
 	Commit `git commit -m '(commit message)`  
 	Push `git push (remote) (branch)` remote will generally be `origin`  
 
-----
+
 ## Pull Request
 
 When your branch is ready to be merged create a pull request.  
