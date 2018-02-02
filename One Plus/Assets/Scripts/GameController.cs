@@ -15,12 +15,12 @@ public class GameController : MonoBehaviour
 
     public void Instructions()
     {
-        SceneManager.LoadScene("Instructions");
+        //SceneManager.LoadScene("Instructions");
     }
 
     public void Play()
     {
-        SceneManager.LoadScene("Play");
+        SceneManager.LoadScene("Level1");
     }
 
     public void Quit()
@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
 
     public void Options()
     {
-        SceneManager.LoadScene("Options");
+        //SceneManager.LoadScene("Options");
     }
     // Use this for initialization
     void Start()
@@ -38,6 +38,7 @@ public class GameController : MonoBehaviour
 
     }
 
+    /*
     // Update is called once per frame
     void Update()
     {
@@ -49,4 +50,5 @@ public class GameController : MonoBehaviour
             }
         }
     }
+    */
 }
