@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PlayerControl : MonoBehaviour
@@ -24,6 +25,9 @@ public class PlayerControl : MonoBehaviour
 
     private float jumpForce;
 
+    private string level;
+    private int levNum;
+
     // Use this for initialization
     void Start()
     {
@@ -34,6 +38,8 @@ public class PlayerControl : MonoBehaviour
         facingRight = true;
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        level = "level1";
+        levNum = 1;
     }
 
     // Update is called once per frame
@@ -63,15 +69,20 @@ public class PlayerControl : MonoBehaviour
         {
             RespawnPlayer();
         }
-        if (collision.gameObject.tag == "key")
+        if (collision.gameObject.tag == "Key")
         {
+            //collision.gameObject.SetActive(false);
             Destroy(collision.gameObject);
             hasKey = true;
         }
         if (collision.gameObject.tag == "Goal" && hasKey)
         {
             // Code to enter next level
+            levNum++;
+            level = "level" + levNum;
+            Debug.Log(level);
             // SceneManager.LoadScene([Level here]);
+            RespawnPlayer();
         }
     }
 
@@ -135,8 +146,10 @@ public class PlayerControl : MonoBehaviour
 	// respawn the player at starting point
 	private void RespawnPlayer()
     {
-		transform.position =  new Vector3(-15f, -8.75f, 0);
-	}
+		//transform.position =  new Vector3(-15f, -8.75f, 0);
+        // replace "tileTest" with level eventually
+        SceneManager.LoadScene("tileTest", LoadSceneMode.Single);
+    }
 
 	// if player goes out of bound respawn player
     private void Bounds()
