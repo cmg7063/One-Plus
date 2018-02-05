@@ -11,11 +11,31 @@ public class GameController : MonoBehaviour
     public Button instructions;
     public Button play;
     public Button quit;
-    public Button options;
+
+    private GameObject instructionPane;
+
+    private bool instructionsClicked;
+
+    // Use this for initialization
+    void Start()
+    {
+        instructionPane = GameObject.FindGameObjectWithTag("ShowOnClick");
+        hideText();
+    }
+
+   void hideText()
+    {
+        instructionPane.SetActive(false);
+    }
+
+    void showText()
+    {
+        instructionPane.SetActive(true);
+    }
 
     public void Instructions()
     {
-        //SceneManager.LoadScene("Instructions");
+        showText();
     }
 
     public void Play()
@@ -27,28 +47,4 @@ public class GameController : MonoBehaviour
     {
         Application.Quit();
     }
-
-    public void Options()
-    {
-        //SceneManager.LoadScene("Options");
-    }
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    /*
-    // Update is called once per frame
-    void Update()
-    {
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Title"))
-        {
-            if (Input.anyKey)
-            {
-                SceneManager.LoadScene("Menu");
-            }
-        }
-    }
-    */
 }

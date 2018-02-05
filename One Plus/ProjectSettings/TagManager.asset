@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Arrow
   - Enemy
+  - Goal
+  - Key
+  - ShowOnClick
   layers:
   - Default
   - TransparentFX
