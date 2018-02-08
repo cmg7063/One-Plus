@@ -9785,12 +9785,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b0b0ebb4e29794fb59bfd635f707ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundPoints:
-  - {fileID: 2050950095}
-  - {fileID: 1420079644}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+  groundPoints:
+  - {fileID: 2050950095}
+  - {fileID: 1420079644}
 --- !u!50 &334273110
 Rigidbody2D:
   serializedVersion: 4
@@ -9879,7 +9879,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 334273108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: -8.82, z: 0}
+  m_LocalPosition: {x: -15, y: -8.924, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2050950095}

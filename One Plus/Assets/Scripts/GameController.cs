@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public Button instructions;
     public Button play;
     public Button quit;
+    public Button close;
 
     private GameObject instructionPane;
 
@@ -36,6 +37,11 @@ public class GameController : MonoBehaviour
     public void Instructions()
     {
         showText();
+    }
+
+    public void Close()
+    {
+        hideText();
     }
 
     public void Play()

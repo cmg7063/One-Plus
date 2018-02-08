@@ -62,6 +62,8 @@ public class PlayerControl : MonoBehaviour
 		isGrounded = checkGrounded();
         Move(horizontal);
         Flip(horizontal);
+
+        HandleLayers();
     }
 
 	// collision detection logic
@@ -108,6 +110,7 @@ public class PlayerControl : MonoBehaviour
 					Debug.Log ("colliders");
                     if(colliders[i].gameObject != gameObject)
                     {
+                        animator.ResetTrigger("jump");
 						Debug.Log ("passed check");
                         return true;
                     }
@@ -133,6 +136,7 @@ public class PlayerControl : MonoBehaviour
 			// jump up with inital jump force
 			jumped = true;
 			isGrounded = false;
+            animator.SetTrigger("jump");
 
 			rigidbody.AddForce (Vector2.up * initJumpForce);
 			currentJumpForce = initJumpForce;
@@ -181,6 +185,18 @@ public class PlayerControl : MonoBehaviour
         if (this.gameObject.transform.position.y <= -12f)
         {
 			RespawnPlayer ();
+        }
+    }
+
+    private void HandleLayers()
+    {
+        if(!isGrounded)
+        {
+            animator.SetLayerWeight(1, 1);
+        }
+        else
+        {
+            animator.SetLayerWeight(1, 0);
         }
     }
 }
