@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Arrow
   - Enemy
   - Goal
   - Key
   - ShowOnClick
+  - ShowOnPause
+  - Projectile
   layers:
   - Default
   - TransparentFX
