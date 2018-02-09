@@ -69,23 +69,19 @@ public class PlayerControl : MonoBehaviour
 	// collision detection logic
 	void OnCollisionEnter2D(Collision2D collision) {
 		// if collision is arrow delete the arrow and respawn the player
-		if (collision.gameObject.tag == "Arrow")
-        {
+		if (collision.gameObject.tag == "Projectile") {
 			Destroy (collision.gameObject);
 			RespawnPlayer ();
 		}
-        if (collision.gameObject.tag == "Enemy") // for now, specify enemy tag
-        {
+        if (collision.gameObject.tag == "Enemy") {
             RespawnPlayer();
         }
-        if (collision.gameObject.tag == "Key")
-        {
+        if (collision.gameObject.tag == "Key") {
             //collision.gameObject.SetActive(false);
             Destroy(collision.gameObject);
             hasKey = true;
         }
-        if (collision.gameObject.tag == "Goal" && hasKey)
-        {
+        if (collision.gameObject.tag == "Goal" && hasKey) {
             // Code to enter next level
             levNum++;
             level = "Level" + levNum;
@@ -175,8 +171,8 @@ public class PlayerControl : MonoBehaviour
 	private void RespawnPlayer()
     {
 		// get the current scene and reload the scene
-		//Scene scene = SceneManager.GetActiveScene();
-		SceneManager.LoadScene(level, LoadSceneMode.Single);
+		Scene scene = SceneManager.GetActiveScene();
+		SceneManager.LoadScene(scene.name, LoadSceneMode.Single);
     }
 
 	// if player goes out of bound respawn player

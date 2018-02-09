@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4032102190670376}
   - component: {fileID: 212825957294068404}
-  - component: {fileID: 114767823031728544}
+  - component: {fileID: 114422849612566730}
   m_Layer: 0
-  m_Name: Squirrel
+  m_Name: Left & Right Squirrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,13 +35,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1132544778769932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114767823031728544
+--- !u!114 &114422849612566730
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -49,11 +49,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1132544778769932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67549c724a9984b10a2b922b51b4f7c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c9cd4d8b16e94a9095352e9ce8ba3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 0}
-  timeLeft: 5
+  inGround: 1
+  throwingObject: {fileID: 1064131231820350, guid: 175021913f92c9b458b4b210cce1915c,
+    type: 2}
+  throwSpeed: 1
+  ThrowDirection: {x: -1, y: 0, z: 0}
+  timeOffset: 5
+  maxTime: 5
 --- !u!212 &212825957294068404
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 61058695283016100}
   - component: {fileID: 50493972874883578}
   m_Layer: 9
-  m_Name: tempArrow
-  m_TagString: Enemy
+  m_Name: Arrow
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51fe76f7298145ba9c0f4cf645db7d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 2.5
+  Velocity: {x: 0, y: 0, z: 0}
 --- !u!212 &212771736425607172
 SpriteRenderer:
   m_ObjectHideFlags: 1
