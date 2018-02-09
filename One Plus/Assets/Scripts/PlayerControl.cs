@@ -46,7 +46,7 @@ public class PlayerControl : MonoBehaviour
 		maxJumpForce = 500f;
 
         hasKey = false;
-        level = "level1";
+        level = "Level1";
         levNum = 1;
     }
 
@@ -88,7 +88,7 @@ public class PlayerControl : MonoBehaviour
         {
             // Code to enter next level
             levNum++;
-            level = "level" + levNum;
+            level = "Level" + levNum;
             Debug.Log(level);
             // SceneManager.LoadScene([Level here]);
             RespawnPlayer();
@@ -175,8 +175,8 @@ public class PlayerControl : MonoBehaviour
 	private void RespawnPlayer()
     {
 		// get the current scene and reload the scene
-		Scene scene = SceneManager.GetActiveScene();
-		SceneManager.LoadScene(scene.name, LoadSceneMode.Single);
+		//Scene scene = SceneManager.GetActiveScene();
+		SceneManager.LoadScene(level, LoadSceneMode.Single);
     }
 
 	// if player goes out of bound respawn player
