@@ -174,9 +174,9 @@ public class PlayerControl : MonoBehaviour
 	// respawn the player at starting point
 	private void RespawnPlayer()
     {
-		//transform.position =  new Vector3(-15f, -8.75f, 0);
-        // replace "tileTest" with level eventually
-        SceneManager.LoadScene("tileTest", LoadSceneMode.Single);
+		// get the current scene and reload the scene
+		Scene scene = SceneManager.GetActiveScene();
+		SceneManager.LoadScene(scene.name, LoadSceneMode.Single);
     }
 
 	// if player goes out of bound respawn player
