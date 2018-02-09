@@ -3029,7 +3029,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1132544778769932, guid: a0e2980b5cbe8cd4fb7edfa40fe63099, type: 2}
       propertyPath: m_Name
-      value: Squirrel (1)
+      value: Left & Right Squirrel (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4032102190670376, guid: a0e2980b5cbe8cd4fb7edfa40fe63099, type: 2}
       propertyPath: m_LocalScale.x

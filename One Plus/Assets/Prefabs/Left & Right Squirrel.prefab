@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212825957294068404}
   - component: {fileID: 114422849612566730}
   m_Layer: 0
-  m_Name: Squirrel (left & right)
+  m_Name: Left & Right Squirrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
