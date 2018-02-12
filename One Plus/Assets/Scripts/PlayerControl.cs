@@ -83,11 +83,11 @@ public class PlayerControl : MonoBehaviour
         }
         if (collision.gameObject.tag == "Goal" && hasKey) {
             // Code to enter next level
+            Scene scene = SceneManager.GetActiveScene();
+            levNum = int.Parse(scene.name);
             levNum++;
-            level = "Level" + levNum;
-            Debug.Log(level);
-            // SceneManager.LoadScene([Level here]);
-            RespawnPlayer();
+            Debug.Log(levNum);
+            SceneManager.LoadScene(levNum.ToString(), LoadSceneMode.Single);
         }
     }
 
