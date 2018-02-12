@@ -25,7 +25,6 @@ public class PlayerControl : MonoBehaviour
 	private float currentJumpForce;
     private float initJumpForce;
 	private float maxJumpForce;
-    private float gravityForce;
 
 	// level related
 	private bool hasKey;
@@ -38,16 +37,13 @@ public class PlayerControl : MonoBehaviour
 		rigidbody = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 
-        movementSpeed = 7;
+        movementSpeed = 3;
 		facingRight = true;
 
 		groundRadius = 0.2f;
 		currentJumpForce = 0f;
-		initJumpForce = 1050f;
-		maxJumpForce = 1400f;
-        gravityForce = 5.5f;
-
-        rigidbody.gravityScale = gravityForce;
+		initJumpForce = 300f;
+		maxJumpForce = 500f;
 
         hasKey = false;
         level = "Level1";
