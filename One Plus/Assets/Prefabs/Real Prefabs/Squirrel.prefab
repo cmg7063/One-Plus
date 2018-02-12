@@ -9,58 +9,61 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1166552034249302}
+  m_RootGameObject: {fileID: 1645783537307908}
   m_IsPrefabParent: 1
---- !u!1 &1166552034249302
+--- !u!1 &1645783537307908
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4053350415091806}
-  - component: {fileID: 212220580466823344}
-  - component: {fileID: 114296582819684844}
+  - component: {fileID: 4719300506199430}
+  - component: {fileID: 212858805488797960}
+  - component: {fileID: 114681859857413622}
   m_Layer: 0
-  m_Name: arrowShooter
+  m_Name: Squirrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4053350415091806
+--- !u!4 &4719300506199430
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1166552034249302}
+  m_GameObject: {fileID: 1645783537307908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.5, y: -6.5, z: -2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.402279, y: -9.345381, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114296582819684844
+--- !u!114 &114681859857413622
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1166552034249302}
+  m_GameObject: {fileID: 1645783537307908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67549c724a9984b10a2b922b51b4f7c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c9cd4d8b16e94a9095352e9ce8ba3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 1540106719046172, guid: ce1239e13d91444ea8211f1c15e4d79a,
-    type: 2}
-  timeLeft: 5
---- !u!212 &212220580466823344
+  inGround: 1
+  throwingObject: {fileID: 0}
+  throwSpeed: 2.5
+  ThrowDirection: {x: -1, y: 0, z: 0}
+  timeOffset: 2.5
+  maxTime: 5
+--- !u!212 &212858805488797960
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1166552034249302}
+  m_GameObject: {fileID: 1645783537307908}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -89,12 +92,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6084ad1e2e52f4c01b60bc5f15c0f129, type: 3}
+  m_Sprite: {fileID: 21300036, guid: b3523cb77df4bd74d890b83c40ed3a24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 1.11, y: 1.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
