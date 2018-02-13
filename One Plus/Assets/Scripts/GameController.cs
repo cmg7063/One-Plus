@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     public Button play;
     public Button quit;
     public Button close;
+    public Button credits;
+    public Button menu;
 
     private GameObject instructionPane;
 
@@ -20,8 +22,11 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        instructionPane = GameObject.FindGameObjectWithTag("ShowOnClick");
-        hideText();
+        if(SceneManager.GetActiveScene().name == "Menu")
+        {
+            instructionPane = GameObject.FindGameObjectWithTag("ShowOnClick");
+            hideText();
+        }
     }
 
    void hideText()
@@ -37,6 +42,16 @@ public class GameController : MonoBehaviour
     public void Instructions()
     {
         showText();
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credit");
     }
 
     public void Close()
