@@ -25,7 +25,6 @@ public class PlayerControl : MonoBehaviour
 	private float currentJumpForce;
     private float initJumpForce;
 	private float maxJumpForce;
-	private float gravityForce;
 
 	// level related
 	private bool hasKey;
@@ -38,16 +37,13 @@ public class PlayerControl : MonoBehaviour
 		rigidbody = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 
-        movementSpeed = 5;
+        movementSpeed = 3;
 		facingRight = true;
 
 		groundRadius = 0.2f;
 		currentJumpForce = 0f;
-		initJumpForce = 650f;
-		maxJumpForce = 1400f;
-
-		gravityForce = 4f;
-		rigidbody.gravityScale = gravityForce;
+		initJumpForce = 300f;
+		maxJumpForce = 500f;
 
         hasKey = false;
         level = "Level1";
@@ -79,6 +75,15 @@ public class PlayerControl : MonoBehaviour
 		}
         if (collision.gameObject.tag == "Enemy") {
             RespawnPlayer();
+        }
+        if(collision.gameObject.tag == "Spikes")
+        {
+            Vector3 contactPoint = collision.contacts[0].point;
+            Vector3 top = collision.collider.bounds.center + new Vector3(0f, 0.3f, 0f);
+            if(contactPoint.y > top.y)
+            {
+                RespawnPlayer();
+            }
         }
         if (collision.gameObject.tag == "Key") {
             //collision.gameObject.SetActive(false);
@@ -143,8 +148,8 @@ public class PlayerControl : MonoBehaviour
 		} else if (!isGrounded && jumping && jumped) {
 			// if space is still down increase jump height
 			if (currentJumpForce < maxJumpForce) {
-				rigidbody.AddForce (Vector2.up * 22.5f);
-				currentJumpForce += 22.5f;
+				rigidbody.AddForce (Vector2.up * 10f);
+				currentJumpForce += 10f;
 			}
 		}
 	}
