@@ -25,6 +25,7 @@ public class PlayerControl : MonoBehaviour
 	private float currentJumpForce;
     private float initJumpForce;
 	private float maxJumpForce;
+	private float gravityForce;
 
 	// level related
 	private bool hasKey;
@@ -37,13 +38,16 @@ public class PlayerControl : MonoBehaviour
 		rigidbody = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 
-        movementSpeed = 3;
+        movementSpeed = 5;
 		facingRight = true;
 
 		groundRadius = 0.2f;
 		currentJumpForce = 0f;
-		initJumpForce = 300f;
-		maxJumpForce = 500f;
+		initJumpForce = 650f;
+		maxJumpForce = 1400f;
+
+		gravityForce = 4f;
+		rigidbody.gravityScale = gravityForce;
 
         hasKey = false;
         level = "Level1";
@@ -139,8 +143,8 @@ public class PlayerControl : MonoBehaviour
 		} else if (!isGrounded && jumping && jumped) {
 			// if space is still down increase jump height
 			if (currentJumpForce < maxJumpForce) {
-				rigidbody.AddForce (Vector2.up * 10f);
-				currentJumpForce += 10f;
+				rigidbody.AddForce (Vector2.up * 22.5f);
+				currentJumpForce += 22.5f;
 			}
 		}
 	}
