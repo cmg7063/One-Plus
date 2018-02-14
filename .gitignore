@@ -6,6 +6,8 @@
 /One Plus/[Bb]uilds/
 /One Plus/Assets/AssetStoreTools*
 
+*.DS_Store
+
 # Visual Studio 2015 cache directory
 /One Plus/.vs/
 
