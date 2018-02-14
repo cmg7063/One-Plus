@@ -30,8 +30,6 @@ public class PlayerControl : MonoBehaviour
 
 	// level related
 	private bool hasKey;
-    private string level;
-    private int levNum;
 
     // Use this for initialization
     void Start()
@@ -51,8 +49,6 @@ public class PlayerControl : MonoBehaviour
         rigidbody.gravityScale = gravityForce;
 
         hasKey = false;
-        level = "Level1";
-        levNum = 1;
     }
 
     // Update is called once per frame
@@ -91,20 +87,11 @@ public class PlayerControl : MonoBehaviour
             }
         }
         if (collision.gameObject.tag == "Key") {
-            //collision.gameObject.SetActive(false);
             Destroy(collision.gameObject);
             hasKey = true;
         }
         if (collision.gameObject.tag == "Goal" && hasKey) {
-            // Code to enter next level
-            String scene = SceneManager.GetActiveScene().name;
-            //int sceneNumber = scene.Contains("_");
-
-            //Debug.Log(sceneNumber);
-            //levNum = int.Parse(scene.Substring(sceneNumber);
-            levNum++;
-            Debug.Log(levNum);
-            SceneManager.LoadScene(levNum.ToString(), LoadSceneMode.Single);
+			loadNextLevel ();
         }
     }
 
@@ -183,6 +170,23 @@ public class PlayerControl : MonoBehaviour
             transform.localScale = theScale;
         }
     }
+
+	// Loads next level when player reaches goal with key
+	private void loadNextLevel() {
+		String sceneName = SceneManager.GetActiveScene().name;
+
+		// get the index of scene number
+		int sceneNumberIndex = sceneName.IndexOf ('_') + 1; 
+
+		// parse the scene level number
+		int levelNumber = int.Parse(sceneName.Substring(sceneNumberIndex));
+		levelNumber++;
+
+		string nextLevel = sceneName.Substring(0, sceneName.Length - 1) + levelNumber.ToString();
+
+		// load the next scene
+		SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
+	}
 
 	// respawn the player at starting point
 	private void RespawnPlayer()
