@@ -9976,10 +9976,6 @@ Prefab:
       propertyPath: m_Name
       value: Spikes
       objectReference: {fileID: 0}
-    - target: {fileID: 1687627458566034, guid: f0922ad5f0a5c3e4db67ed7a95c611eb, type: 2}
-      propertyPath: m_TagString
-      value: Spikes
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0922ad5f0a5c3e4db67ed7a95c611eb, type: 2}
   m_IsPrefabParent: 0
