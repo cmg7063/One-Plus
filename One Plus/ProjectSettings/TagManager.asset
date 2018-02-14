@@ -11,6 +11,7 @@ TagManager:
   - ShowOnClick
   - ShowOnPause
   - Projectile
+  - Spikes
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,7 @@ TagManager:
     locked: 0
   - name: Building
     uniqueID: 4222437389
+    locked: 0
+  - name: 
+    uniqueID: 4224375643
     locked: 0
