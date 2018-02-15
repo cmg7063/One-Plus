@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SquirrelController
+  m_Name: SquirrelControllerDown
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: throw
@@ -121,7 +121,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Squirrel_Throw
-  m_Speed: 1
+  m_Speed: 0.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101106454704237218}
@@ -134,7 +134,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e5ca863b2b0f0c44a9846e506882950d, type: 2}
+  m_Motion: {fileID: 7400000, guid: b0b697f1fc27548c8824fbe66997db8c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -147,7 +147,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Squirrel_Idle
-  m_Speed: 1
+  m_Speed: 0.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101932177967176696}
@@ -160,7 +160,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 900a482e66cac5749b742e0bd14d123a, type: 2}
+  m_Motion: {fileID: 7400000, guid: 227327c5ea94f45f898a71f34f7e0027, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

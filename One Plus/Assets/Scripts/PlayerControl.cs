@@ -77,14 +77,8 @@ public class PlayerControl : MonoBehaviour
         if (collision.gameObject.tag == "Enemy") {
             RespawnPlayer();
         }
-        if(collision.gameObject.tag == "Spikes")
-        {
-            Vector3 contactPoint = collision.contacts[0].point;
-            Vector3 top = collision.collider.bounds.center + new Vector3(0f, 0.3f, 0f);
-            if(contactPoint.y > top.y)
-            {
-                RespawnPlayer();
-            }
+        if(collision.gameObject.tag == "Spikes") {
+			RespawnPlayer ();
         }
         if (collision.gameObject.tag == "Key") {
             Destroy(collision.gameObject);
