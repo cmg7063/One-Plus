@@ -42,6 +42,21 @@ EditorBuildSettings:
     path: Assets/Scenes/City_1.unity
     guid: 697578ccb081440ceb049963f2462fd7
   - enabled: 1
+    path: Assets/Scenes/City_2.unity
+    guid: 0ca0774a93da1e243a0dadc027acf275
+  - enabled: 1
+    path: Assets/Scenes/City_3.unity
+    guid: a6272110cfc680c43bc27e80ef538af4
+  - enabled: 1
+    path: Assets/Scenes/City_4.unity
+    guid: 69a4d7d8f5abbc24d8af6a485733b9e8
+  - enabled: 1
+    path: Assets/Scenes/City_5.unity
+    guid: f52a81a17f55d57428aea6949435d2e5
+  - enabled: 1
+    path: Assets/Scenes/City_6.unity
+    guid: 22a99cff7a1e12240bb7ce6155fac474
+  - enabled: 1
     path: Assets/Scenes/Forest_1.unity
     guid: a7b6b9e4fcf0f4d3d98c89d2b02edc0a
   - enabled: 1
