@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 1656298470}
   - component: {fileID: 1656298469}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -676,6 +676,7 @@ MonoBehaviour:
   play: {fileID: 0}
   quit: {fileID: 0}
   close: {fileID: 0}
+  credits: {fileID: 0}
   menu: {fileID: 264498179}
 --- !u!114 &1656298470
 MonoBehaviour:

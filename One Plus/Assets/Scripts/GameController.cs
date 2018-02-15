@@ -61,7 +61,7 @@ public class GameController : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("World Select");
     }
 
     public void Quit()
