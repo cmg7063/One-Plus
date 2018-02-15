@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4525898917484934}
   - component: {fileID: 212561022960801232}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Penguin
   m_TagString: Key
   m_Icon: {fileID: 0}

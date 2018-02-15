@@ -63,7 +63,7 @@ public class PlayerControl : MonoBehaviour
 		isGrounded = checkGrounded();
         Move(horizontal);
         Flip(horizontal);
-
+		Bounds ();
         HandleLayers();
     }
 

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114570087092568006}
   - component: {fileID: 50775001060873600}
   - component: {fileID: 61714263437403974}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bees
   m_TagString: Enemy
   m_Icon: {fileID: 0}
