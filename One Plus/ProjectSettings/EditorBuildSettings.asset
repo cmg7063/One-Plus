@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 030dc842cb2271f4ea08da975ed166bc
   - enabled: 1
-    path: Assets/Scenes/tileTest.unity
-    guid: be4b333bb94214247a94461cc2757ee0
-  - enabled: 1
     path: Assets/Scenes/Credit.unity
     guid: 0c1d702f5bd48f046b7a8efcb658943b
   - enabled: 1
@@ -30,11 +27,41 @@ EditorBuildSettings:
     path: Assets/Scenes/Swamp_5.unity
     guid: 3243e17b7229a4b49817df4eed845930
   - enabled: 1
+    path: Assets/Scenes/Swamp_6.unity
+    guid: 501be79e278204212bbc7fa0782d1e71
+  - enabled: 1
+    path: Assets/Scenes/Swamp_7.unity
+    guid: d84e862fa92ae4b88832d4c01c691229
+  - enabled: 1
+    path: Assets/Scenes/Swamp_8.unity
+    guid: b2df5a2a1825240c495f506323cf3d8a
+  - enabled: 1
+    path: Assets/Scenes/Swamp_9.unity
+    guid: eee0c6adfc6c8496ab2323c7bd374316
+  - enabled: 1
     path: Assets/Scenes/City_1.unity
     guid: 697578ccb081440ceb049963f2462fd7
   - enabled: 1
     path: Assets/Scenes/Forest_1.unity
     guid: a7b6b9e4fcf0f4d3d98c89d2b02edc0a
+  - enabled: 1
+    path: Assets/Scenes/Forest_2.unity
+    guid: b465dfe3448221f4298c32db2275ad3f
+  - enabled: 1
+    path: Assets/Scenes/Forest_3.unity
+    guid: 251eb1897ce34704fb02d0eeb21a3aba
+  - enabled: 1
+    path: Assets/Scenes/Forest_4.unity
+    guid: e6b397611d43be9459df38613172295d
+  - enabled: 1
+    path: Assets/Scenes/Forest_5.unity
+    guid: 3eb73c93dc5d7bf4ea10ff15e12250d7
+  - enabled: 1
+    path: Assets/Scenes/Forest_6.unity
+    guid: c876a378985edea45abb1de5978af8a7
+  - enabled: 1
+    path: Assets/Scenes/Forest_7.unity
+    guid: 1bb14f9c60be4de4498b73b8d105eee4
   - enabled: 1
     path: Assets/Scenes/Mountain_1.unity
     guid: 3208ebbce9ba243ff8e303690475b527
