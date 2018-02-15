@@ -31,8 +31,8 @@ public class SquirrelScript : MonoBehaviour {
 		if (timeLeft <= 0)
         {
 			FireObject ();
-            animator.SetTrigger("throw");
-            timeLeft = 5;
+			animator.SetTrigger("throw");
+			timeLeft = maxTime;
 		}
 	}
 
@@ -40,7 +40,7 @@ public class SquirrelScript : MonoBehaviour {
 	public void FireObject()
     {
 		GameObject Clone;
-        animator.SetTrigger("throw");
+		animator.SetTrigger("throw");
 
         //spawning the object at position
         Clone = (Instantiate(throwingObject, transform.position, transform.rotation)) as GameObject;
@@ -48,7 +48,7 @@ public class SquirrelScript : MonoBehaviour {
 		// if inGround spawn with larger offset (prevent object instantly destorying itself by ground collision)
 		if (inGround)
         {
-			Clone.transform.Translate (ThrowDirection * 0.70f);
+			Clone.transform.Translate (ThrowDirection * 0.75f);
 		}
         else
         {

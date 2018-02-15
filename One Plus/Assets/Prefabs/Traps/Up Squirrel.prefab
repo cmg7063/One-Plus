@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114422849612566730}
   - component: {fileID: 95738849789081390}
   m_Layer: 0
-  m_Name: Left & Right Squirrel
+  m_Name: Up Squirrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,7 +51,7 @@ Animator:
   m_GameObject: {fileID: 1132544778769932}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 75ef77fa1a7748b4d84d0f173aacc29e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7bf3692bf6d21442683ebf101ca03ba4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
   throwingObject: {fileID: 1064131231820350, guid: 175021913f92c9b458b4b210cce1915c,
     type: 2}
   throwSpeed: 1
-  ThrowDirection: {x: -1, y: 0, z: 0}
+  ThrowDirection: {x: 0, y: 1, z: 0}
   timeOffset: 5
   maxTime: 5
 --- !u!212 &212825957294068404
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300036, guid: b3523cb77df4bd74d890b83c40ed3a24, type: 3}
+  m_Sprite: {fileID: 21300044, guid: b3523cb77df4bd74d890b83c40ed3a24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
