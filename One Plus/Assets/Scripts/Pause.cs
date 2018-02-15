@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Pause : MonoBehaviour {
+
+public class Pause : MonoBehaviour
+{
 
     GameObject[] pauseObjects;
 
@@ -18,10 +21,10 @@ public class Pause : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
         //uses the p button to pause and unpause the game
         if (Input.GetKeyDown(KeyCode.P))
         {
+            Debug.Log("pressed pause");
             if (Time.timeScale == 1)
             {
                 Time.timeScale = 0;
@@ -43,8 +46,7 @@ public class Pause : MonoBehaviour {
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
 
-    //controls the pausing of the scene
-    public void pauseControl()
+    public void Play()
     {
         if (Time.timeScale == 1)
         {
@@ -58,12 +60,17 @@ public class Pause : MonoBehaviour {
         }
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     //shows objects with ShowOnPause tag
     public void showPaused()
     {
         foreach (GameObject g in pauseObjects)
         {
-            g.SetActive(true);
+           g.SetActive(true);
         }
     }
 
