@@ -29,8 +29,8 @@ public class FollowingEnemy : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-		var targetDistance = Vector3.Distance(target.transform.position, transform.position);
-        var hiveDistance = Vector3.Distance(hive.transform.position, transform.position);
+		var targetDistance = Vector2.Distance(target.transform.position, transform.position);
+        var hiveDistance = Vector2.Distance(hive.transform.position, transform.position);
 
 		// if returnHome is false chase player when in distance
 		if (!returnHome) {
