@@ -14,6 +14,7 @@ public class AcornScript : MonoBehaviour {
 	void Start () {
 		// ignore collisions with othe traps
 		Physics2D.IgnoreLayerCollision (9, 9, true);
+		Physics2D.IgnoreLayerCollision (9, 10, true);
 	}
 
 	// Update is called once per frame

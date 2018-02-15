@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212936691817989000}
   - component: {fileID: 50092316725211174}
   - component: {fileID: 61422422528126714}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dog
   m_TagString: Key
   m_Icon: {fileID: 0}

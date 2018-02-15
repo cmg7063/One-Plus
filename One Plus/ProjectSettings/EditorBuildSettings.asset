@@ -21,6 +21,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Swamp_2.unity
     guid: c3d88c2950208453484cbf26304cf3c8
   - enabled: 1
+    path: Assets/Scenes/Swamp_3.unity
+    guid: a87b93287191c47f98750f54b7ca8fa2
+  - enabled: 1
+    path: Assets/Scenes/Swamp_4.unity
+    guid: 16bf0f8f074dc4d93a8f82adadba3b78
+  - enabled: 1
+    path: Assets/Scenes/Swamp_5.unity
+    guid: 3243e17b7229a4b49817df4eed845930
+  - enabled: 1
     path: Assets/Scenes/City_1.unity
     guid: 697578ccb081440ceb049963f2462fd7
   - enabled: 1
