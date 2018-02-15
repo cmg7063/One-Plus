@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1132544778769932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalPosition: {x: 3.306, y: -2.6748738, z: -2}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9cd4d8b16e94a9095352e9ce8ba3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inGround: 1
+  inGround: 0
   throwingObject: {fileID: 1064131231820350, guid: 175021913f92c9b458b4b210cce1915c,
     type: 2}
   throwSpeed: 1
