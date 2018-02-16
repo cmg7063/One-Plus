@@ -83,3 +83,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mountain_1.unity
     guid: 3208ebbce9ba243ff8e303690475b527
+  - enabled: 1
+    path: Assets/Scenes/Mountain_2.unity
+    guid: 7a0065a5a3a28494d9c790836ee35953
+  - enabled: 1
+    path: Assets/Scenes/Mountain_3.unity
+    guid: 2b0be377e3c60bd439695e5ef8ebd2fb
+  - enabled: 1
+    path: Assets/Scenes/Mountain_4.unity
+    guid: b475a22b8552c06499f471a3be073b75
+  - enabled: 1
+    path: Assets/Scenes/Mountain_5.unity
+    guid: fe88e55db7be0a84a88335a3fac499bb
+  - enabled: 1
+    path: Assets/Scenes/Mountain_6.unity
+    guid: 976eef3f18e473748a5643769ab398fa
