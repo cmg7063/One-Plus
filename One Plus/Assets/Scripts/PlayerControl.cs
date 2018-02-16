@@ -179,8 +179,17 @@ public class PlayerControl : MonoBehaviour
 		string nextLevel = sceneName.Substring(0, sceneName.Length - 1) + levelNumber.ToString();
 
 		// load the next scene
-		SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
-	}
+		//SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
+
+        if (Application.CanStreamedLevelBeLoaded(nextLevel))
+        {
+            SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
+        }
+        else
+        {
+            SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        }
+    }
 
 	// respawn the player at starting point
 	private void RespawnPlayer()
