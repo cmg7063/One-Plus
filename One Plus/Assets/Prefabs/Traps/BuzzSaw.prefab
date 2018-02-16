@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50720069622380152}
   - component: {fileID: 58693984599743620}
   - component: {fileID: 114641364655428148}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BuzzSaw
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4559408741067880}
   - component: {fileID: 212503889947881166}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: topHalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4751919009189944}
   - component: {fileID: 212156559709633406}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BottomHalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
