@@ -98,3 +98,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mountain_6.unity
     guid: 976eef3f18e473748a5643769ab398fa
+  - enabled: 1
+    path: Assets/Scenes/Beach_1.unity
+    guid: 105210928bda9dd4b8a6f93237ae6a1d
+  - enabled: 1
+    path: Assets/Scenes/Beach_2.unity
+    guid: e4219477e504ee44a83810c263fadde7
+  - enabled: 1
+    path: Assets/Scenes/Beach_3.unity
+    guid: 1cab7337bc0fe5c4294b8d7f5358edd6
+  - enabled: 1
+    path: Assets/Scenes/Beach_4.unity
+    guid: 8a1ea517c92addd49bbf3aa8dc1f52a8
+  - enabled: 1
+    path: Assets/Scenes/Beach_5.unity
+    guid: 6f4549d27867971468a9d5970b58a8da
+  - enabled: 1
+    path: Assets/Scenes/Beach_6.unity
+    guid: 5cbb04f855b237a48932261498dbc120
