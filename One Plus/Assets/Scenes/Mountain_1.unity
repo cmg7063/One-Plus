@@ -214,12 +214,12 @@ Prefab:
         type: 2}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 715331916}
     - target: {fileID: 114351502021306222, guid: 1d3a58e534f758345a64d2d07d6fdb52,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2087618812}
     - target: {fileID: 114351502021306222, guid: 1d3a58e534f758345a64d2d07d6fdb52,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -229,7 +229,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2087618812}
     - target: {fileID: 114770761559452976, guid: 1d3a58e534f758345a64d2d07d6fdb52,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -239,7 +239,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2087618812}
     - target: {fileID: 114789061554519374, guid: 1d3a58e534f758345a64d2d07d6fdb52,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -6122,6 +6122,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2087618812 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114838715422917442, guid: 92cbe88cbf0ff334b896ca1b9299d01e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1788142788}
+  m_Script: {fileID: 11500000, guid: 4d98e3cab63094a429677b8a91af9844, type: 3}
 --- !u!1001 &2092351762
 Prefab:
   m_ObjectHideFlags: 0
