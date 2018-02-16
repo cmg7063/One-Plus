@@ -40,7 +40,7 @@ public class PlayerControl : MonoBehaviour
         movementSpeed = 5;
 		facingRight = true;
 
-		groundRadius = 0.2f;
+		groundRadius = 0.05f;
 		currentJumpForce = 0f;
 		initJumpForce = 650f;
 		maxJumpForce = 1400f;
